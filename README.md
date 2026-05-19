@@ -61,5 +61,5 @@ Add teacher/student login system
 
 👩‍💻 Developed By
 Anagha AJ
-Android Internship Project
-MindMatrix Technologies
+Internship Project
+MindMatrix 
