@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Akshara-Deepa Tutor - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#c4c5d5",
+                      "on-secondary-fixed-variant": "#005323",
+                      "on-surface-variant": "#444653",
+                      "on-primary-container": "#a8b8ff",
+                      "secondary": "#006d30",
+                      "surface-container-low": "#eff4ff",
+                      "surface-variant": "#d3e4fe",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#89ceff",
+                      "on-surface": "#0b1c30",
+                      "primary-container": "#1e40af",
+                      "tertiary": "#003853",
+                      "secondary-fixed-dim": "#79db8d",
+                      "primary-fixed": "#dde1ff",
+                      "on-secondary-container": "#007233",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#b8c4ff",
+                      "background": "#f8f9ff",
+                      "inverse-primary": "#b8c4ff",
+                      "surface": "#f8f9ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-primary-fixed": "#001453",
+                      "primary": "#00288e",
+                      "surface-tint": "#3755c3",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#cbdbf5",
+                      "inverse-surface": "#213145",
+                      "surface-container": "#e5eeff",
+                      "on-secondary-fixed": "#00210a",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#c9e6ff",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#95f8a7",
+                      "on-primary-fixed-variant": "#173bab",
+                      "on-tertiary-fixed": "#001e2f",
+                      "on-background": "#0b1c30",
+                      "on-tertiary-container": "#68c4ff",
+                      "secondary-container": "#92f5a4",
+                      "surface-bright": "#f8f9ff",
+                      "on-tertiary-fixed-variant": "#004c6e",
+                      "outline": "#757684",
+                      "surface-container-high": "#dce9ff",
+                      "tertiary-container": "#005074"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "12px",
+                      "touch-target-min": "48px",
+                      "margin-mobile": "20px",
+                      "base": "8px",
+                      "gutter-mobile": "16px",
+                      "stack-lg": "40px",
+                      "stack-md": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "30px",
+                              {
+                                      "lineHeight": "38px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-touch-target-min pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-touch-target-min">
+<button aria-label="Menu" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant/50 text-on-surface-variant transition-opacity duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary truncate mx-4">Akshara-Deepa Tutor</h1>
+<button aria-label="Profile" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant/50 text-on-surface-variant transition-opacity duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col px-margin-mobile gap-stack-md pt-stack-md">
+<!-- Greeting & Goal Tracker -->
+<section class="flex flex-col gap-stack-sm">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">Hello Student!</h2>
+<div class="bg-surface-container-low rounded-xl p-4 border border-outline-variant/30 relative overflow-hidden">
+<div class="absolute right-[-20px] top-[-20px] w-24 h-24 bg-secondary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">flag</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Daily Goal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Complete 1 topic today!</p>
+<div class="flex items-center gap-3">
+<div class="flex-grow h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-0 rounded-full transition-all duration-500"></div>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold whitespace-nowrap">[0/1 Done]</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Section: Circular Progress -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/50 flex flex-col items-center justify-center shadow-sm">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold mb-6 self-start w-full text-center">Overall Syllabus Progress</h3>
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- SVG Circular Progress Bar -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background circle -->
+<circle class="text-surface-variant" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress circle (45% of 283 circumference approx 127) -->
+<circle class="text-primary transition-all duration-1000 ease-out" cx="50" cy="50" fill="transparent" r="45" stroke="currentColor" stroke-dasharray="282.7" stroke-dashoffset="155.5" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<!-- Inner Text -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">45%</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mt-1">Completed</span>
+</div>
+</div>
+</section>
+<!-- Secondary Section: Strength Map -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/50 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Strength Map</h3>
+<span class="material-symbols-outlined text-outline" data-icon="info">info</span>
+</div>
+<div class="w-full aspect-square relative max-w-[280px] mx-auto bg-surface rounded-full flex items-center justify-center">
+<!-- Simplified CSS-based Radar Chart representation for UI mockup -->
+<div class="absolute inset-0 border border-outline-variant/30 rounded-full m-4"></div>
+<div class="absolute inset-0 border border-outline-variant/30 rounded-full m-12"></div>
+<div class="absolute inset-0 border border-outline-variant/30 rounded-full m-20"></div>
+<!-- Center point -->
+<div class="w-2 h-2 bg-on-surface rounded-full z-20"></div>
+<!-- Axes -->
+<div class="absolute w-full h-[1px] bg-outline-variant/30 rotate-0"></div>
+<div class="absolute w-full h-[1px] bg-outline-variant/30 rotate-[60deg]"></div>
+<div class="absolute w-full h-[1px] bg-outline-variant/30 rotate-[120deg]"></div>
+<!-- Data Polygon (CSS shape) -->
+<div class="absolute inset-0 z-10 m-8 bg-primary/20 border border-primary/50" style="clip-path: polygon(50% 20%, 80% 40%, 85% 75%, 50% 90%, 15% 65%, 25% 30%);"></div>
+<!-- Labels -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 font-label-md text-label-md text-on-surface bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm z-30">Math</div>
+<div class="absolute bottom-4 right-4 font-label-md text-label-md text-on-surface bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm z-30">Science</div>
+<div class="absolute bottom-4 left-4 font-label-md text-label-md text-on-surface bg-surface-container-lowest px-2 py-1 rounded-full shadow-sm z-30">Social</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-stack-md">
+<button class="bg-primary text-on-primary rounded-xl h-24 flex items-center justify-center gap-4 px-6 shadow-[0_4px_14px_0_rgba(0,40,142,0.1)] active:scale-95 transition-transform">
+<div class="w-12 h-12 bg-on-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+</div>
+<div class="text-left">
+<span class="block font-label-lg text-label-lg font-bold">Go to Syllabus</span>
+<span class="block font-label-md text-label-md opacity-80 mt-1">View your roadmap</span>
+</div>
+</button>
+<button class="bg-surface-container-lowest border-2 border-secondary text-secondary rounded-xl h-24 flex items-center justify-center gap-4 px-6 active:scale-95 transition-transform">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+</div>
+<div class="text-left">
+<span class="block font-label-lg text-label-lg font-bold">Take a Quiz</span>
+<span class="block font-label-md text-label-md opacity-80 mt-1">Test your knowledge</span>
+</div>
+</button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-lowest border-t border-outline-variant fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin-mobile py-base md:hidden">
+<a aria-current="page" class="flex flex-col items-center justify-center text-secondary font-bold hover:text-primary transition-colors min-w-[64px]" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors min-w-[64px]" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="account_tree">account_tree</span>
+<span class="font-label-md text-label-md">Syllabus</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors min-w-[64px]" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="quiz">quiz</span>
+<span class="font-label-md text-label-md">Quiz</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors min-w-[64px]" href="#">
+<span class="material-symbols-outlined text-[24px] mb-1" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Progress</span>
+</a>
+</nav>
+</body></html>
